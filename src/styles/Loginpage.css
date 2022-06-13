@@ -1,0 +1,74 @@
+.login-box {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrapper {
+  min-width: 380px;
+  padding: 20px 30px 5px 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-form {
+  margin: 25px auto;
+  width: 80%;
+  height: auto;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+
+
+.form-control input {
+  width: 94%;
+  height: 40px;
+  /*margin: 5px;*/
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-btn {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  /*margin: 5px; */
+  border: none;
+  /*border-radius: 5px;*/
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: inherit;
+}
+
+.form-btn:hover {
+  background: rgb(7, 153, 7);
+  color: #fff;
+	transform: scale(1.02);
+}
+
+.login-signup-text {
+	padding-top: 25px;
+}
+
+.login-singup-btn {
+	padding-top: 5px;
+	text-decoration: underline;
+	color: #2f8dff;
+	font-size: large;
+	cursor: pointer;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+	transition: transform 0.25s ease-out;
+}
+
+.login-singup-btn:hover {
+	transform: scale(1.09);
+}

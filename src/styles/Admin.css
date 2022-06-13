@@ -1,0 +1,77 @@
+.header-container {
+    background-color: gainsboro;
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-container button {
+    margin-left: 20px;
+  }
+  
+  
+  .header-container input {
+    font-size: 20px;
+    
+    margin-left: 50px;
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  .table-container {
+    
+    margin: 25px auto;
+    width: 80%;
+    height: auto;
+  }
+  
+  
+  
+  .table-container button {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 0px;
+   
+    
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+  }
+  
+  .table-container button:focus {
+    outline: none;
+  }
+  
+  .table-container button:active {
+    transform: scale(0.98);
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+  
+  
+  
+  table {
+    border: 1px solid;
+    width: 100%;
+  }
+  
+  th {
+    background-color: #000;
+    color: white;
+    
+    height: 30px;
+  }
+  
+  td {
+    border: 1px solid;
+    text-align: center;
+  }
