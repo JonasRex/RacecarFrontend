@@ -37,6 +37,11 @@ const Header = ({
                 Create
               </button>
             </NavLink>
+            <NavLink to="/cars">
+              <button className="btn" type="button">
+                Cars
+              </button>
+            </NavLink>
           </>
         ) : null}
 

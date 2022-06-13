@@ -13,9 +13,16 @@ function driverFacade() {
     return localStorage.getItem("jwtToken");
   };
 
+
+
   const fetchAllDrivers = () => {
     const options = makeOptions("GET", false); //True add's the token
     return fetch(URL + "/api/driver", options).then(handleHttpErrors);
+  };
+
+  const fetchDriversByCarID = (id) => {
+    const options = makeOptions("GET", false); //True add's the token
+    return fetch(URL + `/api/driver/car/${id}`, options).then(handleHttpErrors);
   };
 
   const createDriver = (name, birthYear, experience, gender) => {
@@ -53,6 +60,7 @@ function driverFacade() {
     makeOptions,
     getToken,
     fetchAllDrivers,
+    fetchDriversByCarID,
     createDriver
   };
 }

@@ -72,17 +72,16 @@ function App() {
             <Route path="data" element={<Data />} />
 
             <Route path="races" element={<RacePage />} />
-            <Route path="cars" element={<CarPage />} />
-            <Route path="drivers" element={<DriverPage />} />
+
+            <Route path="cars" element={<CarPage />}>
+              <Route index element={<h2>Click to see assigned Drivers</h2>} />
+              <Route path="drivers/:id" element={<DriverPage />} />
+            </Route>
+
+            
+
             <Route path="create" element={<CreatePage />}>
-              <Route
-                index
-                element={
-                 
-                    <h2>What do you want to create?</h2>
-                  
-                }
-              />
+              <Route index element={<h2>What do you want to create?</h2>} />
               <Route path="race" element={<CreateRace />} />
               <Route path="car" element={<CreateCar />} />
               <Route path="driver" element={<CreateDriver />} />
