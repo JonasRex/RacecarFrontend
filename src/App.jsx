@@ -15,6 +15,8 @@ import CreateCar from "./routes/createcar";
 import CreateDriver from "./routes/createdriver";
 import AdminRaces from "./routes/adminraces";
 import EditRace from "./routes/editRace";
+import MyRaces from "./routes/myraces";
+
 import Header from "./components/Header";
 import jwt_decode from "jwt-decode";
 
@@ -74,6 +76,8 @@ function App() {
             <Route path="data" element={<Data />} />
 
             <Route path="races" element={<RacePage />} />
+
+            <Route path="myraces" element={<MyRaces username={user} />} />
 
             <Route path="admin/races" element={<AdminRaces />} />
 

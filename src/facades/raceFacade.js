@@ -18,6 +18,13 @@ function raceFacade() {
     return fetch(URL + "/api/race", options).then(handleHttpErrors);
   };
 
+  const fetchDriversRaces = (username) => {
+    const options = makeOptions("GET", false); //True add's the token
+    return fetch(URL + `/api/race/driver/${username}`, options).then(handleHttpErrors);
+  };
+
+  
+
   const createRace = (name, location, date, duration) => {
     const options = makeOptions("POST", false, {
       name: name,
@@ -79,7 +86,8 @@ function raceFacade() {
     fetchAllRaces,
     createRace,
     editRace,
-    deleteRace
+    deleteRace,
+    fetchDriversRaces
   };
 }
 const facade = raceFacade();
