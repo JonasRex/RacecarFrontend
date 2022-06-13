@@ -7,29 +7,26 @@ function handleHttpErrors(res) {
   return res.json();
 }
 
-function carFacade() {
+function driverFacade() {
   
   const getToken = () => {
     return localStorage.getItem("jwtToken");
   };
 
-  const fetchAllCars = () => {
+  const fetchAllDrivers = () => {
     const options = makeOptions("GET", false); //True add's the token
-    return fetch(URL + "/api/car", options).then(handleHttpErrors);
+    return fetch(URL + "/api/driver", options).then(handleHttpErrors);
   };
 
-  const createCar = (name, brand, make, year, sponsor, color) => {
+  const createDriver = (name, birthYear, experience, gender) => {
     const options = makeOptions("POST", false, {
       name: name,
-      brand: brand,
-      make: make,
-      year: year,
-      sponsor: sponsor,
-      color: color,
-      driverDTOS: []
+      birthYear: birthYear,
+      experience: experience,
+      gender: gender
     });
 
-    return fetch(URL + "/api/car", options)
+    return fetch(URL + "/api/driver", options)
       .then(handleHttpErrors)
       .then((res) => {
         setToken(res.token);
@@ -55,9 +52,9 @@ function carFacade() {
   return {
     makeOptions,
     getToken,
-    fetchAllCars,
-    createCar
+    fetchAllDrivers,
+    createDriver
   };
 }
-const facade = carFacade();
+const facade = driverFacade();
 export default facade;

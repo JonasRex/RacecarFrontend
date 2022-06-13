@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Loginpage.css";
+
 
 import facade from "../facades/raceFacade";
 
@@ -14,7 +14,7 @@ const createrace = () => {
       evt.preventDefault();
       facade.createRace(raceCredentials.name, raceCredentials.location, raceCredentials.date, raceCredentials.duration);
       setRaceCredentials(init);
-      navigate("/races");
+      navigate("/create");
     };
   
 
