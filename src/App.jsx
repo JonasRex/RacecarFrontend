@@ -62,13 +62,22 @@ function App() {
           <Route
             path="/"
             element={
-              <Header
-                loggedIn={loggedIn}
-                setLoggedIn={setLoggedIn}
-                role={role}
-                setRole={setRole}
-                facade={facade}
-              />
+              <>
+                <Header
+                  loggedIn={loggedIn}
+                  setLoggedIn={setLoggedIn}
+                  role={role}
+                  setRole={setRole}
+                  facade={facade}
+                />
+                <div className="frontpage-container">
+                  <h1>TrackMania</h1>
+                  <h2>Worldclass Racing tracker</h2>
+                  <img src="https://techonomy.com/wp-content/uploads/2019/09/Racetrack1-1.jpg.webp" />
+                  <h2>Exam project by cph-jh559</h2>
+                </div>
+                
+              </>
             }
           >
             <Route path="user" element={<User />} />
@@ -86,8 +95,6 @@ function App() {
               <Route path="drivers/:id" element={<DriverPage />} />
             </Route>
 
-            
-
             <Route path="create" element={<CreatePage />}>
               <Route index element={<h2>What do you want to create?</h2>} />
               <Route path="race" element={<CreateRace />} />
@@ -104,10 +111,7 @@ function App() {
               element={<Signup signup={signup} loggedIn={loggedIn} />}
             />
 
-          <Route
-            path="/edit/:id/:na/:loc/:da/:dura"
-            element={<EditRace />}
-          />
+            <Route path="/edit/:id/:na/:loc/:da/:dura" element={<EditRace />} />
 
             <Route
               path="*"
