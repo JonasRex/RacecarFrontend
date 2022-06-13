@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-PROJECT_NAME="harbor"
+PROJECT_NAME="racecar"
 DROPLET_URL="165.22.76.82"
 
 echo "#############################"

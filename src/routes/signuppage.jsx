@@ -11,6 +11,7 @@ const signuppage = ({signup, loggedIn}) => {
     const performSignup = (evt) => {
       evt.preventDefault();
       signup(signupCredentials.username, signupCredentials.password, signupCredentials.password2, signupCredentials.firstname, signupCredentials.lastname, signupCredentials.email);
+      setSignupCredentials(init);
       if (loggedIn) navigate("/");
     };
   

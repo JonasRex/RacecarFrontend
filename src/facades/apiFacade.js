@@ -1,4 +1,5 @@
-const URL = "http://localhost:8080/devops_starter_war_exploded";
+//const URL = "https://localhost:8080/racecar";
+const URL = "https://www.rexdanorum.dk/tomcat/racecar"
 
 function handleHttpErrors(res) {
   if (!res.ok) {

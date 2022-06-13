@@ -11,9 +11,13 @@ const loginpage = ({ login, loggedIn }) => {
 
   const performLogin = (evt) => {
     evt.preventDefault();
-    login(loginCredentials.username, loginCredentials.password);
-    if (loggedIn) navigate("/");
+    let res = login(loginCredentials.username, loginCredentials.password);
+    //console.log(res);
+    //if (loggedIn) navigate("/");
+    navigate("/");
   };
+
+
 
   const performSignup = (evt) => {
     evt.preventDefault();

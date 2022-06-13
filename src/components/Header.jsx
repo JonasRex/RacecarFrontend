@@ -23,14 +23,24 @@ const Header = ({
   return (
     <div>
       <header className="header-container">
-       
+        {/*===== Admin role only =====*/}
         {role == "admin" ? (
-          <NavLink to="/admin">
-            <button className="btn" type="button">
-              Admin
-            </button>
-          </NavLink>
+          <>
+            <NavLink to="/admin">
+              <button className="btn" type="button">
+                Admin
+              </button>
+            </NavLink>
+
+            <NavLink to="/create">
+              <button className="btn" type="button">
+                Create
+              </button>
+            </NavLink>
+          </>
         ) : null}
+
+        {/*===== User role only =====*/}
         {role == "user" ? (
           <NavLink to="/user">
             <button className="btn" type="button">
@@ -38,11 +48,17 @@ const Header = ({
             </button>
           </NavLink>
         ) : null}
-        <NavLink to="/data">
+
+        {/*===== Driver role only =====*/}
+
+        {/*===== For all =====*/}
+
+        <NavLink to="/races">
           <button className="btn" type="button">
-            Data
+            Races
           </button>
         </NavLink>
+
         {!loggedIn ? (
           <NavLink to="/login">
             <button className="btn" type="button">
