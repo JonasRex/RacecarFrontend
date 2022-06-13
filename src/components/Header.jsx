@@ -26,9 +26,9 @@ const Header = ({
         {/*===== Admin role only =====*/}
         {role == "admin" ? (
           <>
-            <NavLink to="/admin">
+            <NavLink to="/admin/races">
               <button className="btn" type="button">
-                Admin
+                Races
               </button>
             </NavLink>
 
@@ -47,22 +47,18 @@ const Header = ({
 
         {/*===== User role only =====*/}
         {role == "user" ? (
-          <NavLink to="/user">
-            <button className="btn" type="button">
-              User
-            </button>
-          </NavLink>
+          <NavLink to="/races">
+          <button className="btn" type="button">
+            Races
+          </button>
+        </NavLink>
         ) : null}
 
         {/*===== Driver role only =====*/}
 
         {/*===== For all =====*/}
 
-        <NavLink to="/races">
-          <button className="btn" type="button">
-            Races
-          </button>
-        </NavLink>
+        
 
         {!loggedIn ? (
           <NavLink to="/login">

@@ -13,6 +13,8 @@ import CreatePage from "./routes/createpage";
 import CreateRace from "./routes/createrace";
 import CreateCar from "./routes/createcar";
 import CreateDriver from "./routes/createdriver";
+import AdminRaces from "./routes/adminraces";
+import EditRace from "./routes/editRace";
 import Header from "./components/Header";
 import jwt_decode from "jwt-decode";
 
@@ -73,6 +75,8 @@ function App() {
 
             <Route path="races" element={<RacePage />} />
 
+            <Route path="admin/races" element={<AdminRaces />} />
+
             <Route path="cars" element={<CarPage />}>
               <Route index element={<h2>Click to see assigned Drivers</h2>} />
               <Route path="drivers/:id" element={<DriverPage />} />
@@ -95,6 +99,11 @@ function App() {
               path="signup"
               element={<Signup signup={signup} loggedIn={loggedIn} />}
             />
+
+          <Route
+            path="/edit/:id/:na/:loc/:da/:dura"
+            element={<EditRace />}
+          />
 
             <Route
               path="*"

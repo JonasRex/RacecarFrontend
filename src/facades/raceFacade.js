@@ -34,6 +34,29 @@ function raceFacade() {
       });
   };
 
+
+  const editRace = (id, name, location, date, duration) => {
+    const options = makeOptions("PUT", false, {
+      name: name,
+      location: location,
+      date: date,
+      duration: duration,
+      carDTOs: []
+    });
+
+    return fetch(URL + `/api/race/${id}`, options)
+      .then(handleHttpErrors)
+      .then((res) => {
+        setToken(res.token);
+      });
+  };
+
+  const deleteRace = (id) => {
+    const options = makeOptions("DELETE", false); //True add's the token
+    return fetch(URL + `/api/race/${id}`, options).then(handleHttpErrors);
+  };
+
+
   const makeOptions = (method, addToken, body) => {
     var opts = {
       method: method,
@@ -54,7 +77,9 @@ function raceFacade() {
     makeOptions,
     getToken,
     fetchAllRaces,
-    createRace
+    createRace,
+    editRace,
+    deleteRace
   };
 }
 const facade = raceFacade();

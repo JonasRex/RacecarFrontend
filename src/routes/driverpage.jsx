@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, NavLink } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 
 import "../styles/Drivers.css";
 import facade from "../facades/driverFacade";
