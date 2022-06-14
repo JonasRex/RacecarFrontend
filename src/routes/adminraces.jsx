@@ -28,9 +28,10 @@ const adminraces = () => {
 
 
 
-  const deleteRace =  (evt) => {
+  const deleteRace = async (id, evt) => {
     evt.preventDefault();
-    
+    let res = await facade.deleteRace(id);
+    setRaces(races.filter((race) => race.id !== id));
   };
 
   return (
@@ -63,7 +64,7 @@ const adminraces = () => {
                 </NavLink>
               </td>
               <td>
-                <button onClick={deleteRace} className="btn-block">
+                <button onClick={(event) => deleteRace(race.id , event)} className="btn-block">
                   Delete
                 </button>
               </td>
