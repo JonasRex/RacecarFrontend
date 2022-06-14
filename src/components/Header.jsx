@@ -90,6 +90,7 @@ const Header = ({
         )}
       </header>
       <Outlet />
+      
     </div>
   );
 };

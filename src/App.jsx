@@ -70,13 +70,14 @@ function App() {
                   setRole={setRole}
                   facade={facade}
                 />
-                <div className="frontpage-container">
-                  <h1>TrackMania</h1>
-                  <h2>Worldclass Racing tracker</h2>
-                  <img src="https://techonomy.com/wp-content/uploads/2019/09/Racetrack1-1.jpg.webp" />
-                  <h2>Exam project by cph-jh559</h2>
-                </div>
-                
+                {!loggedIn ? (
+                  <div className="frontpage-container">
+                    <h1>TrackMania</h1>
+                    <h2>Worldclass Racing tracker</h2>
+                    <img src="https://techonomy.com/wp-content/uploads/2019/09/Racetrack1-1.jpg.webp" />
+                    <h2>Exam project by cph-jh559</h2>
+                  </div>
+                ) : null}
               </>
             }
           >
